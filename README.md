@@ -1,6 +1,8 @@
 # Telegraf for sensorlogger recording via HTTP push
 
-This telegraf config for InfluxDB V2 creates an HTTP endpoint which can be used to directly stream sensorlogger examples into InfluxDB.
+This telegraf config for InfluxDB V2 creates an HTTP endpoint which can be used to directly stream [sensorlogger](https://www.tszheichoi.com/sensorlogger) samples into InfluxDB.
+
+
 
 Tested under Debian bullseye with:
 ```
@@ -8,6 +10,15 @@ influxdb2:amd64/bullseye 2.3.0-1
 influxdb2-cli:amd64/bullseye 2.3.0 
 telegraf:amd64/bullseye 1.23.2-1 
 ```
+
+# About sensorlogger
+
+sensorlogger is a free app available for Android and iOS which can record and stream samples from built-in sensors.
+
+See also:
+
+* https://www.tszheichoi.com/sensorlogger
+* https://github.com/tszheichoi/awesome-sensor-logger/ for more examples and use cases.
 
 # Installation
 
@@ -31,7 +42,11 @@ device, session and sensor name are stored as tags:
 
 ![screenshot](screenshot.png)
 
+# Miscellaneaous
 
+`app.y` is a simple flask application to record the JSON stream emitted by sensorlogger.
+
+`log.js` is an example recording fragment.
 
 # Bugs
 
